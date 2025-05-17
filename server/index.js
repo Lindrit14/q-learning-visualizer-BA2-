@@ -20,7 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/data', dataRouter);
 app.use('/api/python', pythonRouter);
 app.use('/api/maze', mazeRouter);
-app.use('/api/episodes', episodesRouter);
+app.use('/api/episodes', require('./routes/episodes'));
+
 
 // Basic route
 app.get('/', (req, res) => {
